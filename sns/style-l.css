@@ -1,0 +1,127 @@
+@charset "utf-8";
+
+/*共通*/
+html{
+	font-size: 62.5%;
+}
+body {
+  font-family: "reitam", 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro",
+              "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "MS Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 1.4rem;
+  color: #333;
+  background: #e3d9c3 url(image/top-image.png) fixed no-repeat center bottom;
+  background-size: 70%;
+  background-position: left 45% top 20%;
+  background-color:#e3d9c3c5;
+  background-blend-mode:lighten;
+}
+a{
+  color: #333;
+}
+
+
+/*ヘッダー*/
+header{
+	position: fixed;
+	z-index: 900;
+	width: 100%;
+}
+.menu-logo{
+  width: 80px;
+	padding: 5px;
+  border: 1px solid #333;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 20px;
+}
+
+
+/*メインエリア*/
+.site-wrapper{
+  width: 100%;
+  text-align: center;
+  padding: 100px 0;
+  position: relative;
+}
+.site-wrapper h1{
+  font-size: 3rem;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: #B58C34;
+}
+.site-wrapper .site-image{
+  width: 50%;
+  margin: 50px 0;
+}
+/*.site-wrapper .site-image:hover{
+  opacity: 0.8;
+}*/
+.site-wrapper p{
+  font-size: 1.7rem;
+}
+.site-wrapper .site-text{
+  padding: 10px 0 20px 0;
+  width: 50%;
+  margin: 0 auto;
+  background-color: #ffffffa3;
+}
+.site-wrapper .site-info{
+  width: 50%;
+  margin: 0 auto;
+  background-color: #ffffffa3;
+}
+.site-wrapper .site-info p{
+  text-align: left;
+  padding: 0 0 10px 10px;
+}
+.site-wrapper .screencapture-wrapper{
+  margin-top: 70px;
+}
+.site-wrapper .screencapture-wrapper p{
+  width: 60%;
+  margin: 50px auto 0 auto;
+  text-align: left;
+}
+.site-wrapper .screencapture-wrapper .screencapture{
+  width: 60%;
+  margin-top: 10px;
+}
+.fa-solid{
+  font-size: 4rem;
+}
+/*左矢印*/
+.fa-angles-left{
+  position: absolute;
+  position: fixed;
+  z-index: 10;
+  top: 45%;
+  left: 15px;
+}
+/*右矢印*/
+.fa-angles-right{
+  position: absolute;
+  position: fixed;
+  z-index: 10;
+  top: 45%;
+  right: 15px;
+}
+/*上矢印*/
+#page_top{
+  position: fixed;
+  right: -50px;
+  bottom: 130px;
+}
+.fa-circle-chevron-up{
+  font-size: 6rem;
+}
+
+
+/*フッター*/
+footer{
+  width: 100%;
+  height: 70px;
+  color: #fff;
+  background: linear-gradient(#2a2823, #534e45);
+  text-align: center;
+  padding-top: 50px;
+}

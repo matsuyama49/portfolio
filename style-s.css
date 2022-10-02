@@ -1,0 +1,364 @@
+@charset "utf-8";
+
+/*共通*/
+html{
+	font-size: 62.5%;
+}
+body {
+  font-family: "reitam", 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro",
+              "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 1.4rem;
+  color: #333;
+  background: #e3d9c3 url(image/top-image.png) no-repeat center bottom;
+  background-size: 95%;
+  background-position: left 45% top 9%;
+  background-color:#e3d9c3c5;
+  background-blend-mode:lighten;
+}
+a{
+  color: #333;
+}
+h2{
+  font-size:3rem;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  position: relative;
+}
+h2::before{
+  content: '';
+  display: block;
+  width: 35px;
+  height: 2px;
+  background: #B58C34;
+  position: absolute;
+  top: 15px;
+  left: -40px;
+}
+h2::after{
+  content: '';
+  display: block;
+  width: 35px;
+  height: 2px;
+  background: #B58C34;
+  position: absolute;
+  top: 15px;
+  right: -40px;
+}
+
+
+/*ローディング画面*/
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader .looping-rhombuses-spinner{
+  display: none;
+}
+.circles-to-rhombuses-spinner, .circles-to-rhombuses-spinner * {
+      box-sizing: border-box;
+    }
+
+    .circles-to-rhombuses-spinner {
+      height: 15px;
+      width: calc( (15px + 15px * 1.125) * 3);
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .circles-to-rhombuses-spinner .circle {
+      height: 15px;
+      width: 15px;
+      margin-left: calc(15px * 1.125);
+      transform: rotate(45deg);
+      border-radius: 10%;
+      border: 3px solid #333;
+      overflow: hidden;
+      background: transparent;
+
+      -webkit-animation: circles-to-rhombuses-animation 1200ms linear infinite;
+
+              animation: circles-to-rhombuses-animation 1200ms linear infinite;
+    }
+
+    .circles-to-rhombuses-spinner .circle:nth-child(1) {
+      -webkit-animation-delay: calc(150ms * 1);
+              animation-delay: calc(150ms * 1);
+      margin-left: 0
+    }
+
+    .circles-to-rhombuses-spinner .circle:nth-child(2) {
+      -webkit-animation-delay: calc(150ms * 2);
+              animation-delay: calc(150ms * 2);
+    }
+
+    .circles-to-rhombuses-spinner .circle:nth-child(3) {
+      -webkit-animation-delay: calc(150ms * 3);
+              animation-delay: calc(150ms * 3);
+    }
+
+    @-webkit-keyframes circles-to-rhombuses-animation {
+      0% {
+        border-radius: 10%;
+      }
+
+      17.5% {
+        border-radius: 10%;
+      }
+
+      50% {
+        border-radius: 100%;
+      }
+
+      93.5% {
+        border-radius: 10%;
+      }
+
+      100% {
+        border-radius: 10%;
+      }
+    }
+
+    @keyframes circles-to-rhombuses-animation {
+      0% {
+        border-radius: 10%;
+      }
+
+      17.5% {
+        border-radius: 10%;
+      }
+
+      50% {
+        border-radius: 100%;
+      }
+
+      93.5% {
+        border-radius: 10%;
+      }
+
+      100% {
+        border-radius: 10%;
+      }
+    }
+
+    @-webkit-keyframes circles-to-rhombuses-background-animation {
+      50% {
+        opacity: 0.4;
+      }
+    }
+
+    @keyframes circles-to-rhombuses-background-animation {
+      50% {
+        opacity: 0.4;
+      }
+    }
+
+
+/*ヘッダー*/
+header{
+	position: fixed;
+	z-index: 900;
+	width: 100%;
+}
+.menu{
+  display: flex;
+  width: 100%;
+  float: right;
+}
+.menu-logo{
+  width: 50px;
+	padding: 5px;
+  border: 1px solid #333;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 10px;
+}
+.gnavi{
+  width: 100%;
+}
+.gnavi ul{
+  display: flex;
+  float: right;
+}
+.gnavi ul li{
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 32px 15px 0 0;
+}
+.gnavi ul li a{
+  color: #B58C34;
+}
+
+
+/*top*/
+#top{
+ text-align: center;
+ width: 100%;
+ height: 60vh;
+}
+#top h1{
+  padding-top: 40%;
+  padding-bottom: 15px;
+  font-size:5rem;
+  letter-spacing: 0.05em;
+}
+#top div{
+  font-size:4rem;
+}
+
+
+/*works*/
+#works{
+  width: 100%;
+  padding: 50px 0 25px 0;
+  text-align: center;
+}
+#works h2{
+  margin-bottom: 40px;
+}
+#works img{
+  width: 80%;
+  height: 200px;
+  /*object-fit: cover;*/
+  margin-bottom: 50px;
+  box-shadow: 3px 3px 5px;
+}
+#works img:hover{
+  opacity: 0.9;
+}
+
+
+/*スキル　横棒グラフ*/
+#skill{
+  width: 100%;
+  padding: 20px 0 10px 0;
+
+}
+.chart-wrap {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 5px 10px 5px;
+  border: 1px solid #333;
+  background-color: #e9e6e0dd;
+  text-align: center;
+}
+.chart-wrap h2{
+  margin-bottom: 30px;
+}
+.chart-wrap .row {
+  position: relative;
+  height: 15px;
+  margin-bottom: 15px;
+}
+.chart-wrap .bar-wrap {
+  position: relative;
+  background: #dcdcdc;
+  width: 95%;
+  height: 100%;
+  overflow: hidden;
+  float: left;
+}
+.chart-wrap .bar-wrap .bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(45deg, #765611, #b39962);
+  transition: all 1s;
+  transform: translateX(-100%);
+}
+.chart-wrap .bar-wrap .bar.in {
+  transform: translateX(0%);
+}
+/*
+.chart-wrap  .bar {
+  transition: 1s 400ms;
+}
+.chart-wrap  .bar {
+  transition: 1s 600ms;
+}
+.chart-wrap  .bar {
+  transition: 1s 800ms;
+}
+.chart-wrap  .bar {
+  transition: 1s 1000ms;
+}
+.chart-wrap .bar {
+  transition: 1s 1200ms;
+}
+.chart-wrap  .bar {
+  transition: 1s 1400ms;
+}
+.chart-wrap  .bar {
+  transition: 1s 1600ms;
+}
+*/
+.chart-wrap .label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 5px;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 12px;
+  font-weight: bold;
+  z-index: 10;
+  color: #fff;
+}
+.chart-wrap .number {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  padding-right: 5px;
+  font-size: 1rem;
+  line-height: 12px;
+  text-align: right;
+  z-index: 10;
+}
+
+
+/*コンタクト*/
+#contact{
+  width: 100%;
+  text-align: center;
+  padding: 60px 0 60px 0;
+}
+#contact h2{
+  padding-bottom: 10px;
+}
+#contact .fa-envelope{
+  font-size: 1.7rem;
+}
+#contact a{
+  font-size: 1.7rem;
+  margin-left: 2px;
+}
+#contact div{
+  margin-top: 10px;
+}
+#contact span{
+  font-size: 1rem;
+}
+
+
+/*フッター*/
+footer{
+  width: 100%;
+  height: 30px;
+  color: #fff;
+  background: linear-gradient(#2a2823, #534e45);
+  text-align: center;
+  padding-top: 15px;
+}
+footer p{
+  font-size: 1rem;
+}
